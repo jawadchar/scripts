@@ -3,6 +3,10 @@
 Enable PowerShell Script Block Logging.
 Improves malware detection & forensic visibility.
 
+Mitigates fileless attack techniques:
+PowerShell-based ransomware
+Living-off-the-land attacks
+
 .NOTES
     Author          : Jawad Charafeddine
     LinkedIn        : linkedin.com/in/jawadchar/
@@ -24,6 +28,9 @@ Improves malware detection & forensic visibility.
 
     Example syntax:
     PS C:\> .\WN11-CC-000326.ps1
+    Verify Logging:
+    Event Viewer -> Microsoft-Windows-PowerShell/Operational
+    Look for Event ID 4104
 #>
 
 $Path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging"
